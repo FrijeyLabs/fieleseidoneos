@@ -1,0 +1,122 @@
+Design a single-page landing site for Fieles e Idóneos Foundation (part of Amor a Quisqueya) — a faith-inspired nonprofit in Jarabacoa, Dominican Republic. Build a warm, modern, mobile-first layout in Spanish (primary) with an English alternate. Visual style: hopeful, community, clean typography, approachable. Don’t invent facts; use only the info below. Make donation and scholarship sponsorship the primary goals.
+
+Brand / voice
+
+Tone: warm, hopeful, faith-rooted, transparent, community-driven.
+
+Primary language: Spanish (es). Provide English translations for headings/CTAs (toggle or side-by-side).
+
+Header / hero
+
+Big emotional hero image: children in Jarabacoa playing or receiving a meal; community gathering; subtle overlay.
+
+Headline options (spanish + english):
+
+Spanish: “Transformando sueños en decisiones: Educación y becas para jóvenes de Jarabacoa”
+
+English: “Turning dreams into futures: Scholarships & education for Jarabacoa youth”
+
+Subhead (1 short sentence): “Desde 1998 apoyando a niños y jóvenes hacia la universidad.”
+
+CTAs (primary + secondary):
+
+Primary: “Donar / Donar ahora” (link to donate modal)
+
+Secondary: “Apadrinar un estudiante / Sponsor a student”
+
+Quick impact stat strip under hero (3 items): “~100 niños educados”, “Graduados en Ingeniería y Medicina”, “Becas para universidad desde 2013”
+
+About / mission
+
+Short 2–3 sentence mission in Spanish, one-line English alt. Use text from the promo: started as a Saturday meal & club for shoeshine children (1998), grew into Timothy School (2003), transitioned into scholarship work (Fieles e Idóneos) supporting university students since 2013. Emphasize Christian values and long-term support.
+
+History / timeline (visual)
+
+Timeline points with year + short description:
+
+1998 — Park Shoeshine Boys’ Club → Timothy Club (open patio, Saturday meals and play)
+
+2003 — Timothy School founded (bilingual, accelerated system; ~15 years; nearly 100 students)
+
+2013 — Scholarship fund begins; couples’ dinner conferences launched
+
+2017 — School closed due to national reform; mission continues via scholarships
+
+Present — Ongoing scholarships, graduates in civil engineering & medicine, current students in software, industrial engineering, veterinary medicine, computer science, tourism/ecotourism
+
+Use icons for meal, school, scholarship, graduation.
+
+Programs / what we do
+
+Timothy Club & Priscilla Club — weekly community programs and meals
+
+Scholarship Fund — university scholarships funded by events (couples’ conferences). Short bullets with eligibility / how funds are used.
+
+Success stories — short quotes or micro-case (use anonymized examples; sample testimonial copy provided below).
+
+Impact / numbers
+
+Use only supported facts: “Casi 100 niños estudiaron en Timothy School”, “Graduados en ingeniería civil y medicina”, “Alumnos actuales en software, ingeniería industrial, medicina veterinaria, ciencias de la computación, turismo/ecoturismo.”
+
+Visual counters or cards.
+
+Call to action(s)
+
+Donate — modal with one-time / monthly options, suggested amounts, explain where money goes (scholarships, meals, program costs).
+
+Sponsor a student — monthly sponsorship CTA.
+
+Volunteer — short form (name, email, availability).
+
+Attend / Support the couples’ congress — event info block and CTA to buy tickets or sponsor tables.
+
+Testimonials / alumni
+
+Small carousel with 2–3 quotes: include role (alumni, parent, teacher), year or field (e.g., “Graduado en Ingeniería Civil”). Keep them short (15–25 words).
+
+Media / video
+
+Embed a short promo/video (placeholder if not provided). Caption: “Historia de Amor a Quisqueya — Timothy & Fieles e Idóneos”.
+
+Footer
+
+Contact info placeholder: Jarabacoa, phone, email, social (Instagram, YouTube). Newsletter signup. Legal / transparency link (annual report placeholder).
+
+SEO / meta
+
+Title: “Fieles e Idóneos Foundation — Becas y desarrollo juvenil en Jarabacoa”
+
+Description (Spanish): “Desde 1998, la Fundación Fieles e Idóneos apoya a niños y jóvenes de Jarabacoa con programas comunitarios y un fondo de becas universitarias. Contribuye hoy.”
+
+OG image: hero photo + logo.
+
+Imagery suggestions / alt text
+
+Keywords for image generator or stock: “Jarabacoa children community meal”, “Dominican Republic youth education”, “community scholarship students graduation”, “couples dinner charity event Jarabacoa”.
+
+Alt text examples: “Niños del Timothy Club recibiendo una comida en Jarabacoa”; “Graduado universitario apoyado por Fieles e Idóneos”.
+
+Colors & typography
+
+Palette: Warm green (#2F7A4A) + soft gold (#D9B44A) + neutral warm gray (#F6F3F0).
+
+Headings: friendly serif or semi-serif. Body: clean sans. Buttons: rounded, shadow.
+
+Microcopy examples (ready to paste)
+
+Hero short line (ES): “Apoyando sueños universitarios desde 1998.”
+
+Donate button (ES): “Donar ahora” / (EN) “Donate”
+
+Mission paragraph (ES, 2–3 lines):
+“Lo que comenzó en 1998 como un patio abierto para los niños que lustraban zapatos en el parque de Jarabacoa, hoy es un compromiso de por vida con la educación. A través de los clubes Timothy y Priscilla y un fondo de becas universitarias, la Fundación Fieles e Idóneos acompaña a jóvenes hacia la universidad con valores cristianos.”
+
+Impact blurb (EN, 1 line): “Nearly 100 children educated; graduates in engineering and medicine; ongoing university scholarships since 2013.”
+
+Deliverables / layout
+
+Provide a single-scroll landing page with clear anchor links: About → Programs → Impact → Donate → Contact.
+
+Responsive design, quick donate modal, visible phone/email in header for mobile.
+
+Do not invent numbers or claims beyond the promo. Use only the facts given.
