@@ -13,7 +13,8 @@
         }
 
         :root {
-            --warm-green: #2F7A4A;
+            --dominican-blue: #002D62;
+            --dominican-red: #CE1126;
             --soft-gold: #D9B44A;
             --warm-gray: #F6F3F0;
             --white: #FFFFFF;
@@ -49,12 +50,13 @@
             align-items: center;
             padding: 1rem 0;
             flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: var(--warm-green);
+            color: var(--dominican-red);
         }
 
         .nav-links {
@@ -72,13 +74,37 @@
         }
 
         .nav-links a:hover {
-            color: var(--warm-green);
+            color: var(--dominican-red);
+        }
+
+        .instagram-btn {
+            background: linear-gradient(135deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(188, 24, 136, 0.3);
+        }
+
+        .instagram-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(188, 24, 136, 0.5);
+        }
+
+        .instagram-btn::before {
+            content: '📷';
+            font-size: 1.2rem;
         }
 
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(47, 122, 74, 0.85) 0%, rgba(38, 122, 84, 0.85) 100%),
+            background: linear-gradient(135deg, rgba(0, 45, 98, 0.95) 0%, rgba(0, 45, 98, 0.9) 100%),
                         url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&q=80') center/cover;
             color: var(--white);
             padding: 4rem 0;
@@ -116,7 +142,7 @@
         .stat-item strong {
             display: block;
             font-size: 1.5rem;
-            color: var(--soft-gold);
+            color: var(--dominican-red);
             margin-bottom: 0.5rem;
         }
 
@@ -141,14 +167,14 @@
         }
 
         .btn-primary {
-            background-color: var(--soft-gold);
-            color: var(--text-dark);
+            background-color: var(--dominican-red);
+            color: var(--white);
         }
 
         .btn-primary:hover {
-            background-color: #c9a33a;
+            background-color: #a50f1f;
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(206, 17, 38, 0.4);
         }
 
         .btn-secondary {
@@ -159,7 +185,7 @@
 
         .btn-secondary:hover {
             background-color: var(--white);
-            color: var(--warm-green);
+            color: var(--dominican-red);
         }
 
         /* Section Styles */
@@ -173,7 +199,7 @@
 
         h2 {
             font-size: 2rem;
-            color: var(--warm-green);
+            color: var(--dominican-blue);
             margin-bottom: 2rem;
             text-align: center;
         }
@@ -215,8 +241,8 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(180deg, var(--warm-green) 0%, var(--soft-gold) 100%);
-            box-shadow: 0 0 10px rgba(47, 122, 74, 0.3);
+            background: linear-gradient(180deg, var(--dominican-blue) 0%, var(--dominican-red) 100%);
+            box-shadow: 0 0 10px rgba(0, 45, 98, 0.3);
         }
 
         .timeline-item {
@@ -243,7 +269,7 @@
             height: 40px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--soft-gold) 0%, #e5c560 100%);
-            border: 4px solid var(--warm-green);
+            border: 4px solid var(--dominican-blue);
             z-index: 2;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             display: flex;
@@ -254,7 +280,7 @@
         .timeline-year {
             font-weight: bold;
             color: var(--white);
-            background: linear-gradient(135deg, var(--warm-green) 0%, #267a54 100%);
+            background: #6B9BD1;
             padding: 1rem 1.5rem;
             border-radius: 50px;
             font-size: 1.2rem;
@@ -279,6 +305,31 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
+        .timeline-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-separator {
+            margin: 3rem 0;
+            position: relative;
+            text-align: center;
+        }
+
+        .timeline-separator img {
+            width: 100%;
+            max-width: 500px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            border: 4px solid var(--white);
+            
+        }
+
         .timeline-content:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 30px rgba(0,0,0,0.15);
@@ -286,7 +337,7 @@
 
         .timeline-content strong {
             display: block;
-            color: var(--warm-green);
+            color: var(--dominican-blue);
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
         }
@@ -365,7 +416,7 @@
         }
 
         .program-card h3 {
-            color: var(--warm-green);
+            color: var(--dominican-blue);
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
@@ -394,7 +445,7 @@
         .impact-card strong {
             display: block;
             font-size: 1.3rem;
-            color: var(--warm-green);
+            color: var(--dominican-blue);
             margin-bottom: 1rem;
         }
 
@@ -404,7 +455,7 @@
 
         /* CTA Section */
         .cta-section {
-            background: linear-gradient(135deg, var(--warm-green) 0%, #267a54 100%);
+            background: linear-gradient(135deg, var(--dominican-blue) 0%, var(--dominican-red) 100%);
             color: var(--white);
             text-align: center;
         }
@@ -449,7 +500,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
-            border-left: 4px solid var(--warm-green);
+            border-left: 4px solid var(--dominican-blue);
             display: flex;
             align-items: flex-start;
             gap: 1.5rem;
@@ -475,7 +526,7 @@
         }
 
         .testimonial-author {
-            color: var(--warm-green);
+            color: var(--dominican-blue);
             font-weight: 600;
         }
 
@@ -551,7 +602,7 @@
             display: inline-block;
             width: 40px;
             height: 40px;
-            background-color: var(--warm-green);
+            background-color: var(--dominican-blue);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -561,7 +612,7 @@
         }
 
         .social-links a:hover {
-            background-color: var(--soft-gold);
+            background-color: var(--dominican-red);
         }
 
         .logo-image {
@@ -642,7 +693,7 @@
         }
 
         .modal h3 {
-            color: var(--warm-green);
+            color: var(--dominican-blue);
             margin-bottom: 1.5rem;
         }
 
@@ -686,6 +737,31 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            nav {
+                justify-content: center;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+
+            .nav-links {
+                order: 2;
+                width: 100%;
+                justify-content: center;
+                gap: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .instagram-btn {
+                order: 1;
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+            }
+
             .hero h1 {
                 font-size: 1.5rem;
             }
@@ -697,11 +773,6 @@
             .stat-item {
                 min-width: 150px;
                 padding: 1rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-                font-size: 0.9rem;
             }
 
             h2 {
@@ -751,7 +822,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Fieles e Idóneos</div>
+                <div class="logo">Fundación Fieles e Idóneos</div>
                 <ul class="nav-links">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#mision">Misión</a></li>
@@ -760,6 +831,7 @@
                     <li><a href="#impacto">Impacto</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
+                <a href="https://www.instagram.com/fieleseidoneos" target="_blank" class="instagram-btn">Instagram</a>
             </nav>
         </div>
     </header>
@@ -772,26 +844,23 @@
             <p>Desde 1998 apoyando a niños y jóvenes hacia la universidad.</p>
 
             <div class="stats">
-                <div class="stat-item">
-                    <strong>~100</strong>
-                    <span>niños educados</span>
+                <div class="stat-item" style="background-color: #FFF8DC;">
+                    <strong style="color: #002D62;">~100</strong>
+                    <span style="color: #2C2C2C;">niños educados</span>
                 </div>
-                <div class="stat-item">
-                    <strong>Graduados</strong>
-                    <span>en Ingeniería y Medicina</span>
+                <div class="stat-item" style="background-color: #FFF8DC;">
+                    <strong style="color: #002D62;">Graduados</strong>
+                    <span style="color: #2C2C2C;">en Becas</span>
                 </div>
-                <div class="stat-item">
-                    <strong>Becas</strong>
-                    <span>para universidad desde 2013</span>
+                <div class="stat-item" style="background-color: #FFF8DC;">
+                    <strong style="color: #002D62;">Becas</strong>
+                    <span style="color: #2C2C2C;">para universidad desde 2013</span>
                 </div>
             </div>
 
             <div class="cta-buttons">
-                <a href="#" class="btn btn-primary" onclick="openModal('donateModal'); return false;">
+                <a href="https://wa.me/18095746583" target="_blank" class="btn btn-primary">
                     Donar ahora
-                </a>
-                <a href="#" class="btn btn-secondary" onclick="openModal('sponsorModal'); return false;">
-                    Apadrinar un estudiante
                 </a>
             </div>
         </div>
@@ -804,9 +873,9 @@
 
             <div class="mission-content">
                 <p>
-                    Lo que comenzó en 1998 como un patio abierto para los niños que lustraban zapatos en el parque de Jarabacoa, hoy es un compromiso de por vida con la educación. A través de los clubes Timothy y Priscilla y un fondo de becas universitarias, la Fundación Fieles e Idóneos acompaña a jóvenes hacia la universidad con valores cristianos.
+                    Lo que comenzó en 1998 como un patio abierto para los niños que lustraban zapatos en el parque de Jarabacoa, hoy es un compromiso de por vida con la educación. A través de los clubes Timoteo y Priscila y un fondo de becas universitarias, la Fundación Fieles e Idóneos acompaña a jóvenes hacia la universidad con valores cristianos.
                 </p>
-                <img src="fieles_e_idoneos_photo_1.jpg" alt="Niños del Timothy Club en Jarabacoa" class="mission-image">
+                <img src="fieles_e_idoneos_photo_1.jpg" alt="Niños del Club Timoteo en Jarabacoa" class="mission-image">
             </div>
         </div>
     </section>
@@ -814,58 +883,71 @@
     <!-- Timeline Section -->
     <section id="historia">
         <div class="container">
-            <h2 data-lang-es>Nuestra Historia</h2>
-            <h2 data-lang-en>Our Timeline</h2>
+            <h2>Nuestra Historia</h2>
 
             <div class="timeline">
+                <div class="timeline-separator">
+                    <img src="separator_inicio.jpg" alt="El comienzo de nuestra historia">
+                </div>
+
                 <div class="timeline-item">
                     <div class="timeline-year">🍽️ 1998</div>
                     <div class="timeline-content">
-                        <strong data-lang-es>Park Shoeshine Boys' Club → Timothy Club</strong>
-                        <strong data-lang-en>Park Shoeshine Boys' Club → Timothy Club</strong>
-                        <p data-lang-es>Patio abierto, comidas los sábados y juegos para niños que lustraban zapatos en el parque.</p>
-                        <p data-lang-en>Open patio, Saturday meals and play for children who shined shoes in the park.</p>
+                        <img src="timeline_1998.jpg" alt="Club Timoteo 1998" class="timeline-image">
+                        <strong>Club de Niños Limpiabotas → Club Timoteo</strong>
+                        <p>Patio abierto, comidas los sábados y juegos para niños que limpiaban zapatos en el parque.</p>
                     </div>
+                </div>
+
+                <div class="timeline-separator">
+                    <img src="separator_1998_2003.jpg" alt="Crecimiento de la fundación">
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-year">🏫 2003</div>
                     <div class="timeline-content">
-                        <strong data-lang-es>Fundación de Timothy School</strong>
-                        <strong data-lang-en>Timothy School Founded</strong>
-                        <p data-lang-es">Escuela bilingüe con sistema acelerado; funcionó durante ~15 años con casi 100 estudiantes.</p>
-                        <p data-lang-en>Bilingual school with accelerated system; operated for ~15 years with nearly 100 students.</p>
+                        <img src="timeline_2003.jpg" alt="Colegio de Timoteo 2003" class="timeline-image">
+                        <strong>Fundación del Colegio de Timoteo</strong>
+                        <p>Escuela bilingüe con sistema acelerado; funcionó durante ~15 años con casi 100 estudiantes.</p>
                     </div>
+                </div>
+
+                <div class="timeline-separator">
+                    <img src="separator_2003_2013.jpg" alt="Años de formación">
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-year">📚 2013</div>
                     <div class="timeline-content">
-                        <strong data-lang-es>Inicio del fondo de becas</strong>
-                        <strong data-lang-en>Scholarship Fund Begins</strong>
-                        <p data-lang-es">Se lanza el fondo de becas universitarias; comienzan las conferencias de cena para parejas.</p>
-                        <p data-lang-en>University scholarship fund launched; couples' dinner conferences begin.</p>
+                        <img src="timeline_2013.jpg" alt="Fondo de Becas 2013" class="timeline-image">
+                        <strong>Inicio del fondo de becas</strong>
+                        <p ">Se lanza el fondo de becas universitarias; comienzan las conferencias de cena para parejas.</p>
                     </div>
+                </div>
+
+                <div class="timeline-separator">
+                    <img src="separator_2013_2017.jpg" alt="Evolución del programa">
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-year">🔄 2017</div>
                     <div class="timeline-content">
-                        <strong data-lang-es>Cierre de la escuela</strong>
-                        <strong data-lang-en>School Closed</strong>
-                        <p data-lang-es">La escuela cierra debido a reforma nacional; la misión continúa a través de becas.</p>
-                        <p data-lang-en">School closed due to national reform; mission continues via scholarships.</p>
+                        <img src="timeline_2017.jpg" alt="Transición 2017" class="timeline-image">
+                        <strong>Cierre de la escuela</strong>
+                        <p>La escuela cierra debido a reforma nacional; la misión continúa a través de becas.</p>
                     </div>
                 </div>
 
+                <div class="timeline-separator">
+                    <img src="separator_2017_presente.jpg" alt="Nueva era de becas">
+                </div>
+
                 <div class="timeline-item">
-                    <div class="timeline-year" data-lang-es>🎓 Presente</div>
-                    <div class="timeline-year" data-lang-en>🎓 Present</div>
+                    <div class="timeline-year">🎓 Presente</div>
                     <div class="timeline-content">
-                        <strong data-lang-es>Becas continuas</strong>
-                        <strong data-lang-en>Ongoing Scholarships</strong>
-                        <p data-lang-es>Graduados en ingeniería civil y medicina; estudiantes actuales en software, ingeniería industrial, medicina veterinaria, ciencias de la computación, turismo/ecoturismo.</p>
-                        <p data-lang-en>Graduates in civil engineering & medicine; current students in software, industrial engineering, veterinary medicine, computer science, tourism/ecotourism.</p>
+                        <img src="timeline_presente.jpg" alt="Becas Actuales" class="timeline-image">
+                        <strong>Becas continuas</strong>
+                        <p>Graduados en ingeniería civil y medicina; estudiantes actuales en software, ingeniería industrial, medicina veterinaria, ciencias de la computación, turismo/ecoturismo.</p>
                     </div>
                 </div>
             </div>
@@ -879,13 +961,13 @@
 
             <div class="programs-grid">
                 <div class="program-card">
-                    <img src="https://images.unsplash.com/photo-1566140967404-b8b3932483f5?w=800&q=80" alt="Timothy Club & Priscilla Club" class="program-card-image">
-                    <h3>Timothy Club & Priscilla Club</h3>
+                    <img src="fieles_e_idoneos_photo_2.jpg" alt="Club Timoteo y Club Priscila" class="program-card-image">
+                    <h3>Club Timoteo y Club Priscila</h3>
                     <p>Programas comunitarios semanales con comidas y actividades para niños y jóvenes, continuando el legado de apoyo integral que comenzó en 1998.</p>
                 </div>
 
                 <div class="program-card">
-                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80" alt="Scholarship Fund" class="program-card-image">
+                    <img src="fieles_e_idoneos_photo_3.jpg" alt="Fondo de Becas" class="program-card-image">
                     <h3>Fondo de Becas</h3>
                     <p>Becas universitarias financiadas por eventos especiales, incluyendo conferencias para parejas. Apoyando a estudiantes en carreras desde ingeniería hasta ecoturismo.</p>
                 </div>
@@ -901,7 +983,7 @@
             <div class="impact-stats">
                 <div class="impact-card">
                     <strong>~100</strong>
-                    <p>Casi 100 niños estudiaron en Timothy School</p>
+                    <p>Casi 100 niños estudiaron en el Colegio de Timoteo</p>
                 </div>
 
                 <div class="impact-card">
@@ -926,31 +1008,15 @@
                 <div class="cta-card">
                     <h3>Donar</h3>
                     <p>Tu donación apoya becas universitarias y programas comunitarios para jóvenes de Jarabacoa.</p>
-                    <a href="#" class="btn btn-primary" onclick="openModal('donateModal'); return false;">
+                    <a href="https://wa.me/18095746583" target="_blank" class="btn btn-primary">
                         Donar ahora
-                    </a>
-                </div>
-
-                <div class="cta-card">
-                    <h3>Apadrinar</h3>
-                    <p>Apadrina a un estudiante y acompáñalo en su camino hacia la universidad.</p>
-                    <a href="#" class="btn btn-primary" onclick="openModal('sponsorModal'); return false;">
-                        Apadrinar ahora
-                    </a>
-                </div>
-
-                <div class="cta-card">
-                    <h3>Voluntariado</h3>
-                    <p>Únete a nuestro equipo de voluntarios y marca la diferencia en la vida de los jóvenes.</p>
-                    <a href="#" class="btn btn-primary" onclick="openModal('volunteerModal'); return false;">
-                        Inscríbete
                     </a>
                 </div>
 
                 <div class="cta-card">
                     <h3>Congreso de Parejas</h3>
                     <p>Asiste a nuestras conferencias especiales que apoyan el fondo de becas.</p>
-                    <a href="#" class="btn btn-primary" onclick="openModal('congressModal'); return false;">
+                    <a href="https://tiempoparados.carrd.co/" target="_blank" class="btn btn-primary">
                         Más información
                     </a>
                 </div>
@@ -965,7 +1031,7 @@
 
             <div class="testimonials">
                 <div class="testimonial-card">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Civil Engineering Graduate" class="testimonial-avatar">
+                    <img src="fieles_e_idoneos_photo_4.jpg" alt="Civil Engineering Graduate" class="testimonial-avatar">
                     <div class="testimonial-content">
                         <p class="testimonial-text">
                             "Gracias a la Fundación Fieles e Idóneos pude completar mis estudios de ingeniería civil. No solo recibí apoyo financiero, sino también valores y mentoría que me han guiado en mi carrera profesional."
@@ -975,10 +1041,10 @@
                 </div>
 
                 <div class="testimonial-card">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Medical Student" class="testimonial-avatar">
+                    <img src="fieles_e_idoneos_photo_5.jpg" alt="Medical Student" class="testimonial-avatar">
                     <div class="testimonial-content">
                         <p class="testimonial-text">
-                            "Timothy School me dio la oportunidad de estudiar cuando mis padres no podían costear mi educación. Hoy estoy estudiando medicina gracias al fondo de becas."
+                            "El Colegio de Timoteo me dio la oportunidad de estudiar cuando mis padres no podían costear mi educación. Hoy estoy estudiando medicina gracias al fondo de becas."
                         </p>
                         <p class="testimonial-author">— Estudiante de Medicina</p>
                     </div>
@@ -994,17 +1060,17 @@
 
             <div class="media-grid">
                 <div class="media-item">
-                    <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&q=80" alt="Graduate testimonials" style="width: 100%; height: 200px; object-fit: cover;">
+                    <img src="fieles_e_idoneos_photo_6.jpg" alt="Graduate testimonials" style="width: 100%; height: 200px; object-fit: cover;">
                     <p class="media-caption">Testimonios de graduados</p>
                 </div>
 
                 <div class="media-item">
-                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80" alt="Timothy & Priscilla Clubs" style="width: 100%; height: 200px; object-fit: cover;">
-                    <p class="media-caption">Timothy & Priscilla Clubs en acción</p>
+                    <img src="fieles_e_idoneos_photo_7.jpg" alt="Clube Timoteo y Club Priscila" style="width: 100%; height: 200px; object-fit: cover;">
+                    <p class="media-caption">Clubes Timoteo y Priscila en acción</p>
                 </div>
 
                 <div class="media-item">
-                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80" alt="Impact stories" style="width: 100%; height: 200px; object-fit: cover;">
+                    <img src="fieles_e_idoneos_photo_8.jpg" alt="Historias de impacto" style="width: 100%; height: 200px; object-fit: cover;">
                     <p class="media-caption">Historias de impacto</p>
                 </div>
             </div>
@@ -1016,46 +1082,22 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 data-lang-es>Contacto</h3>
-                    <h3 data-lang-en>Contact</h3>
-                    <p>Jarabacoa, República Dominicana</p>
-                    <p data-lang-es>Teléfono: +1 (809) XXX-XXXX</p>
-                    <p data-lang-en>Phone: +1 (809) XXX-XXXX</p>
-                    <p>Email: info@fieleseidoneos.org</p>
+                    <h3>Contacto</h3>
+                    <p>Jarabacoa, Calle Norberto Tiburcio 79 Avenida la Confluencia, República Dominicana</p>
+                    <p>Teléfono: <a href="https://wa.me/18095746583" target="_blank">+1 (809) 574-6583</a></p>
+                    <p>Email: <a href="mailto:amoraquisqueyalocal@gmail.com">amoraquisqueyalocal@gmail.com</a></p>
                     <div class="social-links">
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="YouTube">▶</a>
+                        <a href="https://www.instagram.com/fieleseidoneos" target="_blank" aria-label="Instagram">📷</a>
                     </div>
                 </div>
 
                 <div class="footer-section">
-                    <h3 data-lang-es>Enlaces Rápidos</h3>
-                    <h3 data-lang-en>Quick Links</h3>
-                    <a href="#mision" data-lang-es>Nuestra Misión</a>
-                    <a href="#mision" data-lang-en>Our Mission</a>
-                    <a href="#programas" data-lang-es>Programas</a>
-                    <a href="#programas" data-lang-en>Programs</a>
-                    <a href="#impacto" data-lang-es>Impacto</a>
-                    <a href="#impacto" data-lang-en>Impact</a>
-                    <a href="#" data-lang-es>Informe Anual</a>
-                    <a href="#" data-lang-en>Annual Report</a>
+                    <h3>Enlaces Rápidos</h3>
+                    <a href="#mision">Nuestra Misión</a>
+                    <a href="#programas">Programas</a>
+                    <a href="#impacto">Impacto</a>
+                    <a href="#">Informe Anual</a>
                 </div>
-
-                <div class="footer-section">
-                    <h3 data-lang-es>Boletín</h3>
-                    <h3 data-lang-en>Newsletter</h3>
-                    <p data-lang-es>Suscríbete para recibir noticias y actualizaciones.</p>
-                    <p data-lang-en>Subscribe to receive news and updates.</p>
-                    <form class="newsletter-form" onsubmit="return false;">
-                        <input type="email" placeholder="Email" required>
-                        <button type="submit" data-lang-es>Enviar</button>
-                        <button type="submit" data-lang-en>Submit</button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 Fundación Fieles e Idóneos. <span data-lang-es">Todos los derechos reservados.</span><span data-lang-en>All rights reserved.</span></p>
             </div>
         </div>
     </footer>
@@ -1093,35 +1135,6 @@
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%;">
                     Donar
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Sponsor Modal -->
-    <div id="sponsorModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('sponsorModal')">&times;</span>
-            <h3>Apadrinar un Estudiante</h3>
-            <form onsubmit="return false;">
-                <div class="form-group">
-                    <label>Nombre</label>
-                    <input type="text" required>
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" required>
-                </div>
-                <div class="form-group">
-                    <label>Teléfono</label>
-                    <input type="tel" required>
-                </div>
-                <div class="form-group">
-                    <label>Mensaje (opcional)</label>
-                    <textarea></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">
-                    Enviar
                 </button>
             </form>
         </div>
