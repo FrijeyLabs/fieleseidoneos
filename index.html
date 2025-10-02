@@ -75,27 +75,15 @@
             color: var(--warm-green);
         }
 
-        .lang-toggle {
-            background-color: var(--soft-gold);
-            color: var(--text-dark);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-
-        .lang-toggle:hover {
-            background-color: #c9a33a;
-        }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--warm-green) 0%, #267a54 100%);
+            background: linear-gradient(135deg, rgba(47, 122, 74, 0.85) 0%, rgba(38, 122, 84, 0.85) 100%),
+                        url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&q=80') center/cover;
             color: var(--white);
             padding: 4rem 0;
             text-align: center;
+            position: relative;
         }
 
         .hero h1 {
@@ -200,51 +188,150 @@
             color: var(--text-light);
         }
 
-        /* Timeline Section */
+        .mission-image {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 2rem auto;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        /* Timeline Section - Enhanced Storyline */
         .timeline {
-            max-width: 900px;
-            margin: 0 auto;
+            max-width: 1000px;
+            margin: 3rem auto;
             position: relative;
+            padding: 2rem 0;
         }
 
         .timeline::before {
             content: '';
             position: absolute;
-            left: 0;
+            left: 50%;
+            transform: translateX(-50%);
             top: 0;
             bottom: 0;
-            width: 3px;
-            background-color: var(--warm-green);
+            width: 4px;
+            background: linear-gradient(180deg, var(--warm-green) 0%, var(--soft-gold) 100%);
+            box-shadow: 0 0 10px rgba(47, 122, 74, 0.3);
         }
 
         .timeline-item {
-            margin-bottom: 2rem;
-            padding-left: 3rem;
+            margin-bottom: 4rem;
             position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
         }
 
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -6px;
-            top: 5px;
-            width: 15px;
-            height: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 50%;
+            margin-top: -20px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            background-color: var(--soft-gold);
-            border: 3px solid var(--warm-green);
+            background: linear-gradient(135deg, var(--soft-gold) 0%, #e5c560 100%);
+            border: 4px solid var(--warm-green);
+            z-index: 2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .timeline-year {
             font-weight: bold;
-            color: var(--warm-green);
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--warm-green) 0%, #267a54 100%);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            width: 45%;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .timeline-year:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
         }
 
         .timeline-content {
+            background-color: var(--white);
+            padding: 1.5rem 2rem;
+            border-radius: 15px;
+            width: 45%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--soft-gold);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .timeline-content strong {
+            display: block;
+            color: var(--warm-green);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
             color: var(--text-light);
             line-height: 1.6;
+            margin: 0;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 50%;
+            margin-top: -20px;
+            font-size: 1.3rem;
+            z-index: 3;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+                align-items: flex-start;
+                padding-left: 60px;
+            }
+
+            .timeline-item::before {
+                left: 20px;
+                transform: translateX(-50%);
+            }
+
+            .timeline-year,
+            .timeline-content {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .timeline-icon {
+                left: 20px;
+            }
         }
 
         /* Programs Section */
@@ -261,6 +348,15 @@
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s;
+            overflow: hidden;
+        }
+
+        .program-card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
         }
 
         .program-card:hover {
@@ -354,6 +450,21 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
             border-left: 4px solid var(--warm-green);
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .testimonial-content {
+            flex: 1;
         }
 
         .testimonial-text {
@@ -446,10 +557,18 @@
             align-items: center;
             justify-content: center;
             transition: background-color 0.3s;
+            font-size: 1.2rem;
         }
 
         .social-links a:hover {
             background-color: var(--soft-gold);
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-right: 0.5rem;
         }
 
         .newsletter-form {
@@ -625,34 +744,6 @@
             }
         }
 
-        /* Language Toggle */
-        [data-lang-en] {
-            display: none;
-        }
-
-        body.lang-en [data-lang-es] {
-            display: none;
-        }
-
-        body.lang-en [data-lang-en] {
-            display: block;
-        }
-
-        body.lang-en [data-lang-en].inline {
-            display: inline;
-        }
-
-        body.lang-en [data-lang-en].inline-block {
-            display: inline-block;
-        }
-
-        body.lang-en [data-lang-en].flex {
-            display: flex;
-        }
-
-        body.lang-en [data-lang-en].grid {
-            display: grid;
-        }
     </style>
 </head>
 <body>
@@ -662,17 +753,13 @@
             <nav>
                 <div class="logo">Fieles e Idóneos</div>
                 <ul class="nav-links">
-                    <li><a href="#inicio" data-lang-es>Inicio</a><a href="#inicio" data-lang-en>Home</a></li>
-                    <li><a href="#mision" data-lang-es>Misión</a><a href="#mision" data-lang-en>Mission</a></li>
-                    <li><a href="#historia" data-lang-es>Historia</a><a href="#historia" data-lang-en>Timeline</a></li>
-                    <li><a href="#programas" data-lang-es>Programas</a><a href="#programas" data-lang-en>Programs</a></li>
-                    <li><a href="#impacto" data-lang-es>Impacto</a><a href="#impacto" data-lang-en>Impact</a></li>
-                    <li><a href="#contacto" data-lang-es>Contacto</a><a href="#contacto" data-lang-en>Contact</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#mision">Misión</a></li>
+                    <li><a href="#historia">Historia</a></li>
+                    <li><a href="#programas">Programas</a></li>
+                    <li><a href="#impacto">Impacto</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
-                <button class="lang-toggle" onclick="toggleLanguage()">
-                    <span data-lang-es>English</span>
-                    <span data-lang-en>Español</span>
-                </button>
             </nav>
         </div>
     </header>
@@ -680,40 +767,31 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="container">
-            <h1 data-lang-es>Transformando sueños en decisiones: Educación y becas para jóvenes de Jarabacoa</h1>
-            <h1 data-lang-en>Turning dreams into futures: Scholarships & education for Jarabacoa youth</h1>
+            <h1>Transformando sueños en decisiones: Educación y becas para jóvenes de Jarabacoa</h1>
 
-            <p data-lang-es>Desde 1998 apoyando a niños y jóvenes hacia la universidad.</p>
-            <p data-lang-en>Since 1998 supporting children and youth toward university.</p>
+            <p>Desde 1998 apoyando a niños y jóvenes hacia la universidad.</p>
 
             <div class="stats">
                 <div class="stat-item">
                     <strong>~100</strong>
-                    <span data-lang-es>niños educados</span>
-                    <span data-lang-en>children educated</span>
+                    <span>niños educados</span>
                 </div>
                 <div class="stat-item">
-                    <strong data-lang-es>Graduados</strong>
-                    <strong data-lang-en>Graduates</strong>
-                    <span data-lang-es>en Ingeniería y Medicina</span>
-                    <span data-lang-en>in Engineering & Medicine</span>
+                    <strong>Graduados</strong>
+                    <span>en Ingeniería y Medicina</span>
                 </div>
                 <div class="stat-item">
-                    <strong data-lang-es>Becas</strong>
-                    <strong data-lang-en>Scholarships</strong>
-                    <span data-lang-es>para universidad desde 2013</span>
-                    <span data-lang-en>for university since 2013</span>
+                    <strong>Becas</strong>
+                    <span>para universidad desde 2013</span>
                 </div>
             </div>
 
             <div class="cta-buttons">
                 <a href="#" class="btn btn-primary" onclick="openModal('donateModal'); return false;">
-                    <span data-lang-es>Donar ahora</span>
-                    <span data-lang-en>Donate</span>
+                    Donar ahora
                 </a>
                 <a href="#" class="btn btn-secondary" onclick="openModal('sponsorModal'); return false;">
-                    <span data-lang-es>Apadrinar un estudiante</span>
-                    <span data-lang-en>Sponsor a student</span>
+                    Apadrinar un estudiante
                 </a>
             </div>
         </div>
@@ -722,16 +800,13 @@
     <!-- Mission Section -->
     <section id="mision">
         <div class="container">
-            <h2 data-lang-es>Nuestra Misión</h2>
-            <h2 data-lang-en>Our Mission</h2>
+            <h2>Nuestra Misión</h2>
 
             <div class="mission-content">
-                <p data-lang-es>
+                <p>
                     Lo que comenzó en 1998 como un patio abierto para los niños que lustraban zapatos en el parque de Jarabacoa, hoy es un compromiso de por vida con la educación. A través de los clubes Timothy y Priscilla y un fondo de becas universitarias, la Fundación Fieles e Idóneos acompaña a jóvenes hacia la universidad con valores cristianos.
                 </p>
-                <p data-lang-en>
-                    What began in 1998 as an open patio for children who shined shoes in Jarabacoa's park is today a lifelong commitment to education. Through the Timothy and Priscilla clubs and a university scholarship fund, the Fieles e Idóneos Foundation accompanies young people toward university with Christian values.
-                </p>
+                <img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=800&q=80" alt="Niños del Timothy Club en Jarabacoa" class="mission-image">
             </div>
         </div>
     </section>
@@ -744,7 +819,7 @@
 
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-year">1998</div>
+                    <div class="timeline-year">🍽️ 1998</div>
                     <div class="timeline-content">
                         <strong data-lang-es>Park Shoeshine Boys' Club → Timothy Club</strong>
                         <strong data-lang-en>Park Shoeshine Boys' Club → Timothy Club</strong>
@@ -754,7 +829,7 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-year">2003</div>
+                    <div class="timeline-year">🏫 2003</div>
                     <div class="timeline-content">
                         <strong data-lang-es>Fundación de Timothy School</strong>
                         <strong data-lang-en>Timothy School Founded</strong>
@@ -764,7 +839,7 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-year">2013</div>
+                    <div class="timeline-year">📚 2013</div>
                     <div class="timeline-content">
                         <strong data-lang-es>Inicio del fondo de becas</strong>
                         <strong data-lang-en>Scholarship Fund Begins</strong>
@@ -774,18 +849,18 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-year">2017</div>
+                    <div class="timeline-year">🔄 2017</div>
                     <div class="timeline-content">
                         <strong data-lang-es>Cierre de la escuela</strong>
                         <strong data-lang-en>School Closed</strong>
                         <p data-lang-es">La escuela cierra debido a reforma nacional; la misión continúa a través de becas.</p>
-                        <p data-lang-en>School closed due to national reform; mission continues via scholarships.</p>
+                        <p data-lang-en">School closed due to national reform; mission continues via scholarships.</p>
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-year" data-lang-es>Presente</div>
-                    <div class="timeline-year" data-lang-en>Present</div>
+                    <div class="timeline-year" data-lang-es>🎓 Presente</div>
+                    <div class="timeline-year" data-lang-en>🎓 Present</div>
                     <div class="timeline-content">
                         <strong data-lang-es>Becas continuas</strong>
                         <strong data-lang-en>Ongoing Scholarships</strong>
@@ -800,21 +875,19 @@
     <!-- Programs Section -->
     <section id="programas">
         <div class="container">
-            <h2 data-lang-es>Nuestros Programas</h2>
-            <h2 data-lang-en>Our Programs</h2>
+            <h2>Nuestros Programas</h2>
 
             <div class="programs-grid">
                 <div class="program-card">
+                    <img src="https://images.unsplash.com/photo-1566140967404-b8b3932483f5?w=800&q=80" alt="Timothy Club & Priscilla Club" class="program-card-image">
                     <h3>Timothy Club & Priscilla Club</h3>
-                    <p data-lang-es>Programas comunitarios semanales con comidas y actividades para niños y jóvenes, continuando el legado de apoyo integral que comenzó en 1998.</p>
-                    <p data-lang-en>Weekly community programs with meals and activities for children and youth, continuing the legacy of comprehensive support that began in 1998.</p>
+                    <p>Programas comunitarios semanales con comidas y actividades para niños y jóvenes, continuando el legado de apoyo integral que comenzó en 1998.</p>
                 </div>
 
                 <div class="program-card">
-                    <h3 data-lang-es>Fondo de Becas</h3>
-                    <h3 data-lang-en>Scholarship Fund</h3>
-                    <p data-lang-es">Becas universitarias financiadas por eventos especiales, incluyendo conferencias para parejas. Apoyando a estudiantes en carreras desde ingeniería hasta ecoturismo.</p>
-                    <p data-lang-en>University scholarships funded by special events, including couples' conferences. Supporting students in careers from engineering to ecotourism.</p>
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80" alt="Scholarship Fund" class="program-card-image">
+                    <h3>Fondo de Becas</h3>
+                    <p>Becas universitarias financiadas por eventos especiales, incluyendo conferencias para parejas. Apoyando a estudiantes en carreras desde ingeniería hasta ecoturismo.</p>
                 </div>
             </div>
         </div>
@@ -823,28 +896,22 @@
     <!-- Impact Section -->
     <section id="impacto">
         <div class="container">
-            <h2 data-lang-es>Nuestro Impacto</h2>
-            <h2 data-lang-en>Our Impact</h2>
+            <h2>Nuestro Impacto</h2>
 
             <div class="impact-stats">
                 <div class="impact-card">
                     <strong>~100</strong>
-                    <p data-lang-es>Casi 100 niños estudiaron en Timothy School</p>
-                    <p data-lang-en>Nearly 100 children studied at Timothy School</p>
+                    <p>Casi 100 niños estudiaron en Timothy School</p>
                 </div>
 
                 <div class="impact-card">
-                    <strong data-lang-es>Graduados</strong>
-                    <strong data-lang-en>Graduates</strong>
-                    <p data-lang-es>Graduados en ingeniería civil y medicina</p>
-                    <p data-lang-en>Graduates in civil engineering and medicine</p>
+                    <strong>Graduados</strong>
+                    <p>Graduados en ingeniería civil y medicina</p>
                 </div>
 
                 <div class="impact-card">
-                    <strong data-lang-es>Alumnos Actuales</strong>
-                    <strong data-lang-en>Current Students</strong>
-                    <p data-lang-es>Alumnos actuales en software, ingeniería industrial, medicina veterinaria, ciencias de la computación, turismo/ecoturismo</p>
-                    <p data-lang-en>Current students in software, industrial engineering, veterinary medicine, computer science, tourism/ecotourism</p>
+                    <strong>Alumnos Actuales</strong>
+                    <p>Alumnos actuales en software, ingeniería industrial, medicina veterinaria, ciencias de la computación, turismo/ecoturismo</p>
                 </div>
             </div>
         </div>
@@ -853,51 +920,38 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2 data-lang-es>Involúcrate</h2>
-            <h2 data-lang-en>Get Involved</h2>
+            <h2>Involúcrate</h2>
 
             <div class="cta-grid">
                 <div class="cta-card">
-                    <h3 data-lang-es>Donar</h3>
-                    <h3 data-lang-en>Donate</h3>
-                    <p data-lang-es>Tu donación apoya becas universitarias y programas comunitarios para jóvenes de Jarabacoa.</p>
-                    <p data-lang-en>Your donation supports university scholarships and community programs for Jarabacoa youth.</p>
+                    <h3>Donar</h3>
+                    <p>Tu donación apoya becas universitarias y programas comunitarios para jóvenes de Jarabacoa.</p>
                     <a href="#" class="btn btn-primary" onclick="openModal('donateModal'); return false;">
-                        <span data-lang-es>Donar ahora</span>
-                        <span data-lang-en>Donate now</span>
+                        Donar ahora
                     </a>
                 </div>
 
                 <div class="cta-card">
-                    <h3 data-lang-es>Apadrinar</h3>
-                    <h3 data-lang-en>Sponsor</h3>
-                    <p data-lang-es>Apadrina a un estudiante y acompáñalo en su camino hacia la universidad.</p>
-                    <p data-lang-en>Sponsor a student and accompany them on their journey to university.</p>
+                    <h3>Apadrinar</h3>
+                    <p>Apadrina a un estudiante y acompáñalo en su camino hacia la universidad.</p>
                     <a href="#" class="btn btn-primary" onclick="openModal('sponsorModal'); return false;">
-                        <span data-lang-es>Apadrinar ahora</span>
-                        <span data-lang-en>Sponsor now</span>
+                        Apadrinar ahora
                     </a>
                 </div>
 
                 <div class="cta-card">
-                    <h3 data-lang-es>Voluntariado</h3>
-                    <h3 data-lang-en>Volunteer</h3>
-                    <p data-lang-es>Únete a nuestro equipo de voluntarios y marca la diferencia en la vida de los jóvenes.</p>
-                    <p data-lang-en>Join our volunteer team and make a difference in young people's lives.</p>
+                    <h3>Voluntariado</h3>
+                    <p>Únete a nuestro equipo de voluntarios y marca la diferencia en la vida de los jóvenes.</p>
                     <a href="#" class="btn btn-primary" onclick="openModal('volunteerModal'); return false;">
-                        <span data-lang-es>Inscríbete</span>
-                        <span data-lang-en>Sign up</span>
+                        Inscríbete
                     </a>
                 </div>
 
                 <div class="cta-card">
-                    <h3 data-lang-es>Congreso de Parejas</h3>
-                    <h3 data-lang-en>Couples' Congress</h3>
-                    <p data-lang-es>Asiste a nuestras conferencias especiales que apoyan el fondo de becas.</p>
-                    <p data-lang-en>Attend our special conferences that support the scholarship fund.</p>
+                    <h3>Congreso de Parejas</h3>
+                    <p>Asiste a nuestras conferencias especiales que apoyan el fondo de becas.</p>
                     <a href="#" class="btn btn-primary" onclick="openModal('congressModal'); return false;">
-                        <span data-lang-es>Más información</span>
-                        <span data-lang-en>Learn more</span>
+                        Más información
                     </a>
                 </div>
             </div>
@@ -907,30 +961,27 @@
     <!-- Testimonials Section -->
     <section id="testimonios">
         <div class="container">
-            <h2 data-lang-es>Testimonios</h2>
-            <h2 data-lang-en>Testimonials</h2>
+            <h2>Testimonios</h2>
 
             <div class="testimonials">
                 <div class="testimonial-card">
-                    <p class="testimonial-text" data-lang-es>
-                        "Gracias a la Fundación Fieles e Idóneos pude completar mis estudios de ingeniería civil. No solo recibí apoyo financiero, sino también valores y mentoría que me han guiado en mi carrera profesional."
-                    </p>
-                    <p class="testimonial-text" data-lang-en>
-                        "Thanks to the Fieles e Idóneos Foundation, I was able to complete my civil engineering studies. I received not only financial support, but also values and mentorship that have guided me in my professional career."
-                    </p>
-                    <p class="testimonial-author" data-lang-es>— Graduado en Ingeniería Civil</p>
-                    <p class="testimonial-author" data-lang-en>— Civil Engineering Graduate</p>
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Civil Engineering Graduate" class="testimonial-avatar">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "Gracias a la Fundación Fieles e Idóneos pude completar mis estudios de ingeniería civil. No solo recibí apoyo financiero, sino también valores y mentoría que me han guiado en mi carrera profesional."
+                        </p>
+                        <p class="testimonial-author">— Graduado en Ingeniería Civil</p>
+                    </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <p class="testimonial-text" data-lang-es>
-                        "Timothy School me dio la oportunidad de estudiar cuando mis padres no podían costear mi educación. Hoy estoy estudiando medicina gracias al fondo de becas."
-                    </p>
-                    <p class="testimonial-text" data-lang-en>
-                        "Timothy School gave me the opportunity to study when my parents couldn't afford my education. Today I'm studying medicine thanks to the scholarship fund."
-                    </p>
-                    <p class="testimonial-author" data-lang-es>— Estudiante de Medicina</p>
-                    <p class="testimonial-author" data-lang-en>— Medical Student</p>
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Medical Student" class="testimonial-avatar">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "Timothy School me dio la oportunidad de estudiar cuando mis padres no podían costear mi educación. Hoy estoy estudiando medicina gracias al fondo de becas."
+                        </p>
+                        <p class="testimonial-author">— Estudiante de Medicina</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -939,26 +990,22 @@
     <!-- Media Section -->
     <section id="media">
         <div class="container">
-            <h2 data-lang-es>Galería</h2>
-            <h2 data-lang-en>Gallery</h2>
+            <h2>Galería</h2>
 
             <div class="media-grid">
                 <div class="media-item">
-                    <div class="video-placeholder">▶</div>
-                    <p class="media-caption" data-lang-es>Testimonios de graduados</p>
-                    <p class="media-caption" data-lang-en>Graduate testimonials</p>
+                    <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&q=80" alt="Graduate testimonials" style="width: 100%; height: 200px; object-fit: cover;">
+                    <p class="media-caption">Testimonios de graduados</p>
                 </div>
 
                 <div class="media-item">
-                    <div class="video-placeholder">▶</div>
-                    <p class="media-caption" data-lang-es>Timothy & Priscilla Clubs en acción</p>
-                    <p class="media-caption" data-lang-en>Timothy & Priscilla Clubs in action</p>
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80" alt="Timothy & Priscilla Clubs" style="width: 100%; height: 200px; object-fit: cover;">
+                    <p class="media-caption">Timothy & Priscilla Clubs en acción</p>
                 </div>
 
                 <div class="media-item">
-                    <div class="video-placeholder">▶</div>
-                    <p class="media-caption" data-lang-es>Historias de impacto</p>
-                    <p class="media-caption" data-lang-en>Impact stories</p>
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80" alt="Impact stories" style="width: 100%; height: 200px; object-fit: cover;">
+                    <p class="media-caption">Historias de impacto</p>
                 </div>
             </div>
         </div>
@@ -1017,33 +1064,27 @@
     <div id="donateModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('donateModal')">&times;</span>
-            <h3 data-lang-es>Hacer una Donación</h3>
-            <h3 data-lang-en>Make a Donation</h3>
+            <h3>Hacer una Donación</h3>
             <form onsubmit="return false;">
                 <div class="form-group">
-                    <label data-lang-es>Tipo de donación</label>
-                    <label data-lang-en>Donation type</label>
+                    <label>Tipo de donación</label>
                     <div class="radio-group">
                         <label>
                             <input type="radio" name="donationType" value="one-time" checked>
-                            <span data-lang-es>Una vez</span>
-                            <span data-lang-en>One-time</span>
+                            Una vez
                         </label>
                         <label>
                             <input type="radio" name="donationType" value="monthly">
-                            <span data-lang-es>Mensual</span>
-                            <span data-lang-en>Monthly</span>
+                            Mensual
                         </label>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label data-lang-es>Monto</label>
-                    <label data-lang-en>Amount</label>
+                    <label>Monto</label>
                     <input type="number" min="1" placeholder="$" required>
                 </div>
                 <div class="form-group">
-                    <label data-lang-es>Nombre</label>
-                    <label data-lang-en>Name</label>
+                    <label>Nombre</label>
                     <input type="text" required>
                 </div>
                 <div class="form-group">
@@ -1051,8 +1092,7 @@
                     <input type="email" required>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%;">
-                    <span data-lang-es>Donar</span>
-                    <span data-lang-en>Donate</span>
+                    Donar
                 </button>
             </form>
         </div>
@@ -1062,12 +1102,10 @@
     <div id="sponsorModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('sponsorModal')">&times;</span>
-            <h3 data-lang-es>Apadrinar un Estudiante</h3>
-            <h3 data-lang-en>Sponsor a Student</h3>
+            <h3>Apadrinar un Estudiante</h3>
             <form onsubmit="return false;">
                 <div class="form-group">
-                    <label data-lang-es>Nombre</label>
-                    <label data-lang-en>Name</label>
+                    <label>Nombre</label>
                     <input type="text" required>
                 </div>
                 <div class="form-group">
@@ -1075,18 +1113,15 @@
                     <input type="email" required>
                 </div>
                 <div class="form-group">
-                    <label data-lang-es>Teléfono</label>
-                    <label data-lang-en>Phone</label>
+                    <label>Teléfono</label>
                     <input type="tel" required>
                 </div>
                 <div class="form-group">
-                    <label data-lang-es">Mensaje (opcional)</label>
-                    <label data-lang-en>Message (optional)</label>
+                    <label>Mensaje (opcional)</label>
                     <textarea></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%;">
-                    <span data-lang-es>Enviar</span>
-                    <span data-lang-en>Submit</span>
+                    Enviar
                 </button>
             </form>
         </div>
@@ -1096,12 +1131,10 @@
     <div id="volunteerModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('volunteerModal')">&times;</span>
-            <h3 data-lang-es>Inscripción de Voluntarios</h3>
-            <h3 data-lang-en>Volunteer Registration</h3>
+            <h3>Inscripción de Voluntarios</h3>
             <form onsubmit="return false;">
                 <div class="form-group">
-                    <label data-lang-es>Nombre</label>
-                    <label data-lang-en>Name</label>
+                    <label>Nombre</label>
                     <input type="text" required>
                 </div>
                 <div class="form-group">
@@ -1109,18 +1142,15 @@
                     <input type="email" required>
                 </div>
                 <div class="form-group">
-                    <label data-lang-es>Teléfono</label>
-                    <label data-lang-en>Phone</label>
+                    <label>Teléfono</label>
                     <input type="tel" required>
                 </div>
                 <div class="form-group">
-                    <label data-lang-es>Áreas de interés</label>
-                    <label data-lang-en>Areas of interest</label>
+                    <label>Áreas de interés</label>
                     <textarea required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%;">
-                    <span data-lang-es">Enviar</span>
-                    <span data-lang-en>Submit</span>
+                    Enviar
                 </button>
             </form>
         </div>
@@ -1130,14 +1160,11 @@
     <div id="congressModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('congressModal')">&times;</span>
-            <h3 data-lang-es>Congreso de Parejas</h3>
-            <h3 data-lang-en>Couples' Congress</h3>
-            <p data-lang-es>Únete a nuestro próximo congreso de parejas. Estos eventos especiales no solo fortalecen relaciones, sino que también apoyan directamente nuestro fondo de becas universitarias.</p>
-            <p data-lang-en>Join our next couples' congress. These special events not only strengthen relationships, but also directly support our university scholarship fund.</p>
+            <h3>Congreso de Parejas</h3>
+            <p>Únete a nuestro próximo congreso de parejas. Estos eventos especiales no solo fortalecen relaciones, sino que también apoyan directamente nuestro fondo de becas universitarias.</p>
             <form onsubmit="return false;">
                 <div class="form-group">
-                    <label data-lang-es>Nombres (ambos)</label>
-                    <label data-lang-en>Names (both)</label>
+                    <label>Nombres (ambos)</label>
                     <input type="text" required>
                 </div>
                 <div class="form-group">
@@ -1145,24 +1172,17 @@
                     <input type="email" required>
                 </div>
                 <div class="form-group">
-                    <label data-lang-es>Teléfono</label>
-                    <label data-lang-en>Phone</label>
+                    <label>Teléfono</label>
                     <input type="tel" required>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%;">
-                    <span data-lang-es>Registrarse</span>
-                    <span data-lang-en>Register</span>
+                    Registrarse
                 </button>
             </form>
         </div>
     </div>
 
     <script>
-        // Language Toggle
-        function toggleLanguage() {
-            document.body.classList.toggle('lang-en');
-        }
-
         // Modal Functions
         function openModal(modalId) {
             document.getElementById(modalId).style.display = 'block';
