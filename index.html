@@ -105,7 +105,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, rgba(0, 45, 98, 0.95) 0%, rgba(0, 45, 98, 0.9) 100%),
-                        url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&q=80') center/cover;
+                        url('separator_inicio.jpg') center/cover;
             color: var(--white);
             padding: 4rem 0;
             text-align: center;
@@ -873,7 +873,7 @@
 
             <div class="mission-content">
                 <p>
-                    Lo que comenzó en 1998 como un patio abierto para los niños que lustraban zapatos en el parque de Jarabacoa, hoy es un compromiso de por vida con la educación. A través de los clubes Timoteo y Priscila y un fondo de becas universitarias, la Fundación Fieles e Idóneos acompaña a jóvenes hacia la universidad con valores cristianos.
+                    Lo que comenzó en 1998 como un patio abierto para los niños que limpiaban zapatos en el parque de Jarabacoa, hoy es un compromiso de por vida con la educación. A través de los clubes Timoteo y Priscila y un fondo de becas universitarias, la Fundación Fieles e Idóneos acompaña a jóvenes hacia la universidad con valores cristianos.
                 </p>
                 <img src="fieles_e_idoneos_photo_1.jpg" alt="Niños del Club Timoteo en Jarabacoa" class="mission-image">
             </div>
@@ -1031,20 +1031,20 @@
 
             <div class="testimonials">
                 <div class="testimonial-card">
-                    <img src="fieles_e_idoneos_photo_4.jpg" alt="Civil Engineering Graduate" class="testimonial-avatar">
+                    <img src="fieles_e_idoneos_photo_4.jpg" alt="Moisés Luna" class="testimonial-avatar">
                     <div class="testimonial-content">
                         <p class="testimonial-text">
-                            "Gracias a la Fundación Fieles e Idóneos pude completar mis estudios de ingeniería civil. No solo recibí apoyo financiero, sino también valores y mentoría que me han guiado en mi carrera profesional."
+                            "Texto de ejemplo: Gracias a la Fundación Fieles e Idóneos pude completar mis estudios de ingeniería civil. No solo recibí apoyo financiero, sino también valores y mentoría que me han guiado en mi carrera profesional."
                         </p>
                         <p class="testimonial-author">— Graduado en Ingeniería Civil</p>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <img src="fieles_e_idoneos_photo_5.jpg" alt="Medical Student" class="testimonial-avatar">
+                    <img src="fieles_e_idoneos_photo_5.jpg" alt="Juan Carlos Fermín Veloz" class="testimonial-avatar">
                     <div class="testimonial-content">
                         <p class="testimonial-text">
-                            "El Colegio de Timoteo me dio la oportunidad de estudiar cuando mis padres no podían costear mi educación. Hoy estoy estudiando medicina gracias al fondo de becas."
+                            "Texto de Ejemplo: El Colegio de Timoteo me dio la oportunidad de estudiar cuando mis padres no podían costear mi educación. Hoy estoy estudiando medicina gracias al fondo de becas."
                         </p>
                         <p class="testimonial-author">— Estudiante de Medicina</p>
                     </div>
@@ -1053,29 +1053,74 @@
         </div>
     </section>
 
-    <!-- Media Section -->
-    <section id="media">
+<section id="media">
         <div class="container">
-            <h2>Galería</h2>
+            <h2>Galería de Videos</h2>
 
             <div class="media-grid">
                 <div class="media-item">
-                    <img src="fieles_e_idoneos_photo_6.jpg" alt="Graduate testimonials" style="width: 100%; height: 200px; object-fit: cover;">
-                    <p class="media-caption">Testimonios de graduados</p>
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/ApjISQzY3PI" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="media-caption">Fieles e Idóneos: Nuestros Comienzos - Niños Limpiabotas</p>
                 </div>
 
                 <div class="media-item">
-                    <img src="fieles_e_idoneos_photo_7.jpg" alt="Clube Timoteo y Club Priscila" style="width: 100%; height: 200px; object-fit: cover;">
-                    <p class="media-caption">Clubes Timoteo y Priscila en acción</p>
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/wod0l6AoWDc" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="media-caption">Fieles e Idóneos Parte: Colegio Timoteo</p>
                 </div>
 
                 <div class="media-item">
-                    <img src="fieles_e_idoneos_photo_8.jpg" alt="Historias de impacto" style="width: 100%; height: 200px; object-fit: cover;">
-                    <p class="media-caption">Historias de impacto</p>
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/x1FR1hCCWtI" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="media-caption">Fieles e Idóneos Parte 3: Fondo de Becas</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporción 16:9 */
+            height: 0;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .media-caption {
+             margin-top: 8px; /* Ajusta el espacio entre el video y el texto si es necesario */
+        }
+    </style>
 
     <!-- Footer -->
     <footer id="contacto">
@@ -1086,9 +1131,6 @@
                     <p>Jarabacoa, Calle Norberto Tiburcio 79 Avenida la Confluencia, República Dominicana</p>
                     <p>Teléfono: <a href="https://wa.me/18095746583" target="_blank">+1 (809) 574-6583</a></p>
                     <p>Email: <a href="mailto:amoraquisqueyalocal@gmail.com">amoraquisqueyalocal@gmail.com</a></p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/fieleseidoneos" target="_blank" aria-label="Instagram">📷</a>
-                    </div>
                 </div>
 
                 <div class="footer-section">
